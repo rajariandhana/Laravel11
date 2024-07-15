@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model{
     use HasFactory;
+    protected $with = ['author','category'];
     // protected $table = 'namaTabel';
     // protected $primaryKey = 'primaryKey';
     protected $fillable = ['title','author','slug','body'];

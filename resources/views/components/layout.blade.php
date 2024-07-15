@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" href="/">
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
+    @vite(['resources/css/app.css','resources/js/app.js'])
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
@@ -17,7 +18,7 @@
         <x-navbar></x-navbar>
         <x-header>{{$title}}</x-header>
         <main>
-            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+            <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 {{$slot}}
             </div>
         </main>
